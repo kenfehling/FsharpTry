@@ -59,6 +59,9 @@
     <None Include="App.config" />
     <Content Include="packages.config" />
     <Content Include="web.config" />
+    <None Include="app.azure.fsx" />
+    <None Include="app.fsx" />
+    <None Include="build.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Forecast.io.45">
