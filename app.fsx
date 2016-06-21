@@ -5,7 +5,6 @@
 open System
 open System.IO
 open Suave
-open Suave.Types
 open Suave.Filters
 open Suave.Operators
 open Suave.Successful
