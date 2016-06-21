@@ -8,15 +8,12 @@ open App
 open Fake
 open System
 open Suave
-open Suave.Http
-open Suave.Filters
-open Suave.Successful
 
 let serverConfig =
   let port = int (getBuildParam "port")
   { Web.defaultConfig with
       homeFolder = Some __SOURCE_DIRECTORY__
       logger = Logging.Loggers.saneDefaultsFor Logging.LogLevel.Warn
-      bindings = [ HttpBinding.mk' HTTP "127.0.0.1" port ] }
+      bindings = [ HttpBinding.mkSimple HTTP "127.0.0.1" port ] }
 
 Web.startWebServer serverConfig app
